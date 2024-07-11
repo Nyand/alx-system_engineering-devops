@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# Script that will display information about subdomains,given a domain and a subdomain
+
+domain_info () {
+    # All subdomains of the domain
+    subdomains=("www"  "lb-01" "web-01" "web-02")
+
+    # check if a subdomain is given as the second argument($2)
+    if [ -z "$2" ]; then
+    # if ($2) is empty, then loop through all subdomains in subdomain array
+	for i in "${subdomains[@]}"; do
+	    dig "$i.$1" | grep -A1 'ANSWER SECTION:' | tail -n1 | awk '{split($0, DOMAIN, "."); print "The subdomain " DOMAIN[1] " is a " $4 " record and points to " $5}'
+	done
+
+    # if ($2) is not empty, then print the information about the given subdomain($2)
+    else
+	dig "$2.$1" | grep -A1 'ANSWER SECTION:' | tail -n1 | awk '{split($0, DOMAIN, "."); print "The subdomain " DOMAIN[1] " is a " $4 " record and points to " $5}'
+    fi
+}
+domain_info "$1" "$2"
