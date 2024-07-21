@@ -1,10 +1,2 @@
-what happens when you type https://www.google.com in your browser and press Enter
-Several things happen when you type "google.com" into the address bar of your browser and hit Enter: To put it briefly, your browser initiates a sequence of actions to find the website, retrieve its content, and present it to you on your screen.
-1. DNS Lookup: To find out if it already knows the IP address for google.com, your browser looks through its cache. In the event that it doesn't, it makes a request to a DNS server using the Domain Name System (DNS) to convert "google.com" into an IP address.
-2. Building a Relationship:Upon obtaining the IP address, your browser uses either the HTTP or HTTPS protocol to establish a connection with the server hosting google.com, depending on whether you entered http:// or https://.
-3. Making an Inquiry: Your browser makes a request to the server to obtain the google.com homepage. The information in this request, which aids the server in delivering the proper version of the webpage, includes the kind of browser you are using.
-4. Processing the Request:Your request is received and processed by the server hosting google.com. Depending on how the website is configured, it either builds the Google homepage dynamically or obtains it from its files.
-5. Getting a Reaction: Your browser receives a response from the server. The HTML content of the Google homepage is included in this answer, along with other items including JavaScript scripts, CSS stylesheets, and pictures that are required for proper page rendering.
-6. Creating the Page Render: After receiving the response, your browser starts to display the Google homepage on your screen. The HTML code is interpreted, CSS styles are applied, any JavaScript is run, and the webpage is displayed as it appears to you.
-7. Creating a Secure Connection, if Needed: A TLS/SSL handshake is also carried out by the server and your browser if you typed https://google.com to create a secure encrypted connection. This guarantees the privacy and security of any data exchanged between your browser and the server.
+https://medium.com/@rbrtmt100/what-happens-when-you-type-https-www-google-com-in-your-browser-and-press-enter-839abe45fcfc
 
