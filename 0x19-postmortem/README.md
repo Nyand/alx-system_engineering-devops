@@ -1,10 +1,10 @@
 <img src=./image.png width=50%>
 
-# BooktifuL requests failure report
-Last week, it was reported that the BooktifuL platform was returning 500 Error on all requests made on the platform routes, all the services were down.  90% of the users were affected. The root cause was the failure of our master server web-01.
+# QXN  requests failure report
+Last week, it was reported that the QXN  platform was returning 500 Error on all requests made on the platform routes, all the services were down.  90% of the users were affected. The root cause was the failure of one of the servers.
 
 ## Timeline
-The error was realized on Friday 24th February 1400 hours (West Africa Time) when our Site Reliability Engineer, Mr Douglas saw the master server lagging in speed. Our engineers on call disconnected the master server web-01 for further system analysis and channelled all requests to client server web-02. They solved problem by Saturday 25th Febraury 2400 hours (West Africa Time).
+The error was realized on Friday 24th February 1400 hours (West Africa Time) when our Site Reliability Engineer, Mr RObert saw the master server lagging in speed. Our engineers on call disconnected the master server web-01 for further system analysis and channelled all requests to client server web-02. They solved problem by Saturday 25th Febraury 2400 hours (West Africa Time).
 
 ## Root cause and resolution
 The BooktifuL platform is served by 2 ubuntu cloud servers. The master server web-01 was connected to serve all requests, and it stopped functioning due to memory outage as a results of so many requests because during a previous test, the client server web-02 was disconnected temporarily for testing and was not connected to the load balancer afterwards. 
